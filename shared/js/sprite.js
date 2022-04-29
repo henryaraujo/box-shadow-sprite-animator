@@ -25,7 +25,15 @@ export class Sprite {
   }
 
   collide(element, fn) {
-    if(this.x === element.x && this.y === element.y) {
+    if(Array.isArray(element)) {
+      element.forEach(item => this.#checkColision(item, fn))
+    } else {
+     this.#checkColision(element, fn)
+    }
+  }
+
+  #checkColision(element, fn) {
+    if(this.x === element.x) {
       return fn(element)
     }
   }
