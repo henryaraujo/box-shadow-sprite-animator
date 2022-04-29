@@ -1,0 +1,47 @@
+@import url('../../../shared/css/player-walk-left.css');
+@import url('../../../shared/css/player-walk-right.css');
+@import url('./stage.css');
+
+:root {
+  --pixel-sprite: 4px;
+  --scale: 2;
+  --background-color: #b6e6ff;
+  --animation-default: 1s step-start 0s infinite normal none running;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  width: 2040px;
+  height: 100vh;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.player[data-direction="up"] {
+  animation: var(--animation-default) walk_up;
+}
+
+.player[data-direction="down"] {
+  animation: var(--animation-default) walk_down;
+}
+
+.player[data-direction="right"] {
+  animation: var(--animation-default) walk_right;
+}
+
+.player[data-direction="left"] {
+  animation: var(--animation-default) walk_left;
+}
+
+.sprite {
+  width: var(--pixel-sprite);
+  height: var(--pixel-sprite);
+  transform: scale(var(--scale));
+  position: absolute;
+}
