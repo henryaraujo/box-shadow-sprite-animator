@@ -1,4 +1,4 @@
-@import url('../shared/css/player-walk-down.css');
+@import url('./shared/css/player-walk-down.css');
 
 :root {
   --pixel-sprite: 4px;
