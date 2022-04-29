@@ -1,0 +1,75 @@
+@import url('../../shared/css/player-walk-down.css');
+@import url('../../shared/css/player-walk-left.css');
+@import url('../../shared/css/player-walk-right.css');
+@import url('../../shared/css/player-walk-up.css');
+
+:root {
+  --pixel-sprite: 4px;
+  --scale: 2;
+  --background-color: #b6e6ff;
+  --animation-default: 1s step-start 0s infinite normal none running;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --scale: 1;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  :root {
+    --scale: 1.3;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --scale: 1.5;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  :root {
+    --scale: 1.8;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  :root {
+    --scale: 2;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  image-rendering: pixelated;
+}
+
+div[data-sprite="player"] {
+  width: var(--pixel-sprite);
+  height: var(--pixel-sprite);
+  transform: scale(var(--scale));
+  position: absolute;
+}
+
+div[data-direction="up"] {
+  animation: var(--animation-default) walk_up;
+}
+
+div[data-direction="down"] {
+  animation: var(--animation-default) walk_down;
+}
+
+div[data-direction="right"] {
+  animation: var(--animation-default) walk_right;
+}
+
+div[data-direction="left"] {
+  animation: var(--animation-default) walk_left;
+}
