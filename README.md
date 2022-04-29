@@ -18,6 +18,12 @@ On this example you can use the keys `A,D` or `Arrows`
 
 [Stage](https://henryaraujo.github.io/box-shadow-sprite-animator/examples/stage/)
 
+# Collide example
+
+On this example you can use the keys `A,D` or `Arrows`
+
+[Collide](https://henryaraujo.github.io/box-shadow-sprite-animator/examples/collide/)
+
 # At this point, you must be wondering how is he creating those animations?
 
 I've been working in a small editor to create the animations with CSS box-shadow.
